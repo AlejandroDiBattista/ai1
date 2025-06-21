@@ -1,0 +1,86 @@
+/* Estilos para el formulario de contacto */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .input-field {
+  flex: 1;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #F6F7F9;
+  border: 1px solid #E5E5EA;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  resize: vertical;
+}
+
+.textarea:focus {
+  border-color: #1476FF;
+}
+
+.textarea::placeholder {
+  color: #8E8E93;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #545454;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  gap: 8px;
+}
+
+.error-list {
+  background-color: #FFE5E5;
+  border: 1px solid #FF3B30;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.error-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #FF3B30;
+  margin: 0 0 8px 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.error-item {
+  font-size: 13px;
+  color: #FF3B30;
+  margin: 4px 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

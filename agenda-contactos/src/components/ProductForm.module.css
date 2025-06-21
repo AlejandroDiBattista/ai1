@@ -1,0 +1,92 @@
+/* Estilos para el formulario de productos */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .input-field {
+  flex: 1;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #545454;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  gap: 8px;
+}
+
+.error-list {
+  background-color: #FFE5E5;
+  border: 1px solid #FF3B30;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.error-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #FF3B30;
+  margin: 0 0 8px 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.error-item {
+  font-size: 13px;
+  color: #FF3B30;
+  margin: 4px 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.currency-input,
+.number-input {
+  text-align: right;
+}
+
+.profit-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #F0F9FF;
+  border: 1px solid #0EA5E9;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #0369A1;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.profit-positive {
+  background-color: #F0FDF4;
+  border-color: #22C55E;
+  color: #15803D;
+}
+
+.profit-negative {
+  background-color: #FEF2F2;
+  border-color: #EF4444;
+  color: #DC2626;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

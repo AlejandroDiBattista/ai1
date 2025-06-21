@@ -1,0 +1,61 @@
+/* Estilos para el componente Button */
+.button {
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+/* Variantes */
+.button--primary {
+  background-color: #1476FF;
+  color: #FFFFFF;
+}
+
+.button--primary:hover:not(:disabled) {
+  background-color: #0F64DB;
+}
+
+.button--primary:disabled {
+  background-color: #8E8E93;
+}
+
+.button--secondary {
+  background-color: #F6F7F9;
+  color: #0A0A0A;
+  border: 1px solid #E5E5EA;
+}
+
+.button--ghost {
+  background-color: transparent;
+  color: #1476FF;
+}
+
+/* Tamaños */
+.button--sm {
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.button--md {
+  padding: 12px 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.button--lg {
+  padding: 16px 24px;
+  font-size: 20px;
+  font-weight: 600;
+}

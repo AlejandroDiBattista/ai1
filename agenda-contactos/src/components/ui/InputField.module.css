@@ -1,0 +1,88 @@
+/* Estilos para el componente InputField */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #545454;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #F6F7F9;
+  border: 1px solid #E5E5EA;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input--with-icon {
+  padding-left: 44px;
+}
+
+.input--error {
+  border-color: #FF3B30;
+}
+
+.input:focus {
+  border-color: #1476FF;
+}
+
+.input::placeholder {
+  color: #8E8E93;
+}
+
+.icon {
+  position: absolute;
+  left: 12px;
+  color: #8E8E93;
+  pointer-events: none;
+}
+
+.error {
+  font-size: 13px;
+  color: #FF3B30;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.input--readonly {
+  /* background-color: transparent; */
+  border: none;
+  padding: 8px;
+  color: #0A0A0A;
+  font-weight: 500;
+  cursor: default;
+}
+
+.input--readonly:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.input--readonly.input--with-icon {
+  padding-left: 28px;
+}
+
+.icon--readonly {
+  color: #1476FF;
+  left: 0;
+}

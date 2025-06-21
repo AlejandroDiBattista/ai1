@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "name": "Marketplace-Mobile-Design-System",
+    "description": "Tokens y componentes extraídos de las capturas para recrear el estilo visual de forma consistente",
+    "baseline_grid": 4,
+    "device": "iOS — mobile"
+  },
+
+  "tokens": {
+    "color": {
+      "primary":   "#1476FF",            
+      "primary-hover": "#0F64DB",
+      "error":     "#FF3B30",
+      "warning":   "#FF9500",
+      "success":   "#34C759",
+      "info":      "#5AC8FA",
+
+      "text-high": "#0A0A0A",
+      "text-medium": "#545454",
+      "text-low": "#8E8E93",
+
+      "surface-01": "#FFFFFF",           
+      "surface-02": "#F6F7F9",           
+      "stroke":    "#E5E5EA",            
+      "overlay":   "rgba(0,0,0,0.25)"    
+    },
+
+    "typography": {
+      "fontFamily": "System",
+      "h1":   { "size": 24, "weight": 700, "lineHeight": 32 },
+      "h2":   { "size": 20, "weight": 600, "lineHeight": 28 },
+      "h3":   { "size": 17, "weight": 600, "lineHeight": 24 },
+      "body": { "size": 15, "weight": 400, "lineHeight": 22 },
+      "caption": { "size": 13, "weight": 400, "lineHeight": 18 }
+    },
+
+    "spacing": {
+      "0": 0,
+      "1": 4,
+      "2": 8,
+      "3": 12,
+      "4": 16,
+      "5": 20,
+      "6": 24
+    },
+
+    "radius": {
+      "sm": 6,
+      "md": 12,
+      "lg": 20,
+      "pill": 999
+    },
+
+    "shadow": {
+      "card": "0px 2px 6px rgba(0,0,0,0.06)",
+      "elevated": "0px 4px 12px rgba(0,0,0,0.08)"
+    }
+  },
+
+  "components": {
+    "Button": {
+      "base": {
+        "paddingVertical": "{spacing.3}",
+        "paddingHorizontal": "{spacing.5}",
+        "radius": "{radius.md}",
+        "font": "{typography.h3}",
+        "elevation": 0
+      },
+      "variants": {
+        "primary": {
+          "background": "{color.primary}",
+          "textColor": "{color.surface-01}"
+        },
+        "secondary": {
+          "background": "{color.surface-02}",
+          "textColor": "{color.text-high}",
+          "border": "1px solid {color.stroke}"
+        },
+        "ghost": {
+          "background": "transparent",
+          "textColor": "{color.primary}"
+        }
+      }
+    },
+
+    "InputField": {
+      "height": 44,
+      "paddingHorizontal": "{spacing.4}",
+      "font": "{typography.body}",
+      "background": "{color.surface-02}",
+      "border": "1px solid {color.stroke}",
+      "radius": "{radius.sm}",
+      "placeholderColor": "{color.text-low}",
+      "iconSize": 18
+    },
+
+    "Checkbox": {
+      "size": 20,
+      "radius": 4,
+      "uncheckedBorder": "1.5px solid {color.stroke}",
+      "checkedBackground": "{color.primary}",
+      "iconColor": "{color.surface-01}"
+    },
+
+    "TopBar": {
+      "height": 56,
+      "background": "{color.surface-01}",
+      "titleStyle": "{typography.h3}",
+      "leftAction": "icon | back",
+      "rightActions": ["icon | notifications", "avatar | 28px"]
+    },
+
+    "BottomTabBar": {
+      "height": 72,
+      "background": "{color.surface-01}",
+      "items": 5,
+      "activeTint": "{color.primary}",
+      "inactiveTint": "{color.text-low}",
+      "iconSize": 24,
+      "labelStyle": "{typography.caption}"
+    },
+
+    "CategoryChip": {
+      "size": 72,
+      "layout": "vertical-icon-label",
+      "iconSize": 28,
+      "radius": "{radius.md}",
+      "background": "{color.surface-02}",
+      "textStyle": "{typography.caption}",
+      "spacing": "{spacing.2}"
+    },
+
+    "Card": {
+      "radius": "{radius.lg}",
+      "shadow": "{shadow.card}",
+      "imageRatio": "4:3",
+      "padding": "{spacing.4}",
+      "elements": ["image", "title", "meta", "price"],
+      "titleStyle": "{typography.body}",
+      "metaStyle": "{typography.caption}",
+      "priceStyle": { "inherit": "{typography.h3}", "color": "{color.primary}" }
+    },
+
+    "ListTile": {
+      "height": 60,
+      "paddingHorizontal": "{spacing.4}",
+      "layout": "leading-title-trailing",
+      "divider": "{color.stroke}"
+    },
+
+    "FAB": {
+      "size": 56,
+      "shape": "circle",
+      "iconSize": 24,
+      "background": "{color.primary}",
+      "iconColor": "{color.surface-01}",
+      "shadow": "{shadow.elevated}"
+    }
+  },
+
+  "layouts": {
+    "AuthScreen": {
+      "sections": [
+        "topBar(back)",
+        "form(email, password, remember-me, forgot-password)",
+        "primaryAction(button-sign-in)",
+        "socialAuth(providerButtons)",
+        "footer(link-sign-up)"
+      ],
+      "verticalSpacing": "{spacing.5}"
+    },
+
+    "HomeScreen": {
+      "sections": [
+        "topBar(location, search, actions)",
+        "categories(horizontal-scroll Chips)",
+        "featured(horizontal-scroll Cards)",
+        "recent(vertical-list Cards)",
+        "bottomTabBar"
+      ],
+      "scrollBehavior": "vertical"
+    },
+
+    "DetailScreen": {
+      "sections": [
+        "gallery(image-carousel)",
+        "header(title, meta-tags, price)",
+        "description(accordion)",
+        "sellerInfo(tile, actions)",
+        "bottomActions(make-offer, wishlist-toggle)"
+      ]
+    },
+
+    "CategoryScreen": {
+      "sections": [
+        "topBar(back, search)",
+        "groupedList(section-title, list-tiles)",
+        "seeMoreLink"
+      ]
+    }
+  }
+}
