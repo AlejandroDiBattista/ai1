@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "tokens:audit": "node scripts/audit-css.cjs",
+    "tokens:migrate": "node scripts/migrate-css-tokens.cjs",
+    "tokens:validate": "node scripts/validate-css-tokens.cjs"
   },
   "dependencies": {
     "lucide-react": "^0.520.0",

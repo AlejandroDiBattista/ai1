@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100%;
   background: white;
-  border-radius: 20px;
+  border-radius: var(--spacing-5);
   overflow: hidden;
 }
 

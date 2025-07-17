@@ -8,11 +8,11 @@
 .profit-info {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3);
   background-color: #F0F9FF;
   border: 1px solid #0EA5E9;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 13px;
   color: #0369A1;
   font-family: system-ui, -apple-system, sans-serif;

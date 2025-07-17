@@ -3,12 +3,12 @@
 .avatar {
   width: 48px;
   height: 48px;
-  background-color: #1476FF;
+  background-color: var(--color-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: var(--color-surface-01);
   font-weight: 600;
   font-size: 18px;
   font-family: system-ui, -apple-system, sans-serif;
@@ -19,14 +19,14 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: var(--spacing-1);
   min-width: 0;
 }
 
 .name {
   font-size: 17px;
   font-weight: 600;
-  color: #0A0A0A;
+  color: var(--color-text-high);
   font-family: system-ui, -apple-system, sans-serif;
   margin: 0;
   white-space: nowrap;
@@ -42,7 +42,7 @@
 
 .contact-detail {
   font-size: 13px;
-  color: #545454;
+  color: var(--color-text-medium);
   font-family: system-ui, -apple-system, sans-serif;
   display: flex;
   align-items: center;
@@ -54,15 +54,15 @@
 
 .empty-state {
   text-align: center;
-  padding: 48px 24px;
-  color: #8E8E93;
+  padding: 48px var(--spacing-6);
+  color: var(--color-text-low);
 }
 
 .empty-state h3 {
-  font-size: 20px;
+  font-size: var(--spacing-5);
   font-weight: 600;
-  color: #545454;
-  margin: 0 0 8px 0;
+  color: var(--color-text-medium);
+  margin: 0 0 var(--spacing-2) 0;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
@@ -75,17 +75,17 @@
 .list-container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--spacing-3);
 }
 
 @media (max-width: 640px) {
   .avatar {
     width: 40px;
     height: 40px;
-    font-size: 16px;
+    font-size: var(--spacing-4);
   }
   
   .contact-detail {
-    font-size: 12px;
+    font-size: var(--spacing-3);
   }
 }

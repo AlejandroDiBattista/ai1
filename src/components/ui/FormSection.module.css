@@ -1,6 +1,6 @@
 .section {
-  border: 1px solid #E5E5EA;
-  border-radius: 12px;
+  border: 1px solid var(--color-stroke);
+  border-radius: var(--spacing-3);
   padding: 10px;
   background-color: #FAFAFA;
 }
@@ -8,12 +8,12 @@
 .section-title {
   font-size: 17px;
   font-weight: 600;
-  color: #0A0A0A;
-  margin: 0 0 16px;
+  color: var(--color-text-high);
+  margin: 0 0 var(--spacing-4);
   font-family: system-ui, -apple-system, sans-serif;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
 }
 
 .section--customer {

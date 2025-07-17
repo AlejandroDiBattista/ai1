@@ -16,7 +16,7 @@
 .avatar--small {
   width: 32px;
   height: 32px;
-  font-size: 12px;
+  font-size: var(--spacing-3);
 }
 
 .avatar--medium {
@@ -37,11 +37,11 @@
 }
 
 .avatar--product {
-  background-color: #34C759; /* Verde para productos */
+  background-color: var(--color-success); /* Verde para productos */
 }
 
 .avatar--purchase {
-  background-color: #FF9500; /* Naranja para compras */
+  background-color: var(--color-warning); /* Naranja para compras */
 }
 
 /* Estados hover y focus para interactividad */
@@ -55,7 +55,7 @@
   .avatar--large {
     width: 48px;
     height: 48px;
-    font-size: 16px;
+    font-size: var(--spacing-4);
   }
   
   .avatar--medium {

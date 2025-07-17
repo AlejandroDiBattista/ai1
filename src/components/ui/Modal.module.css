@@ -10,13 +10,13 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  padding: 20px;
+  padding: var(--spacing-5);
 }
 
 .modal {
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: var(--color-surface-01);
+  border-radius: var(--spacing-5);
+  box-shadow: 0px var(--spacing-1) var(--spacing-3) rgba(0, 0, 0, 0.08);
   width: 100%;
   max-width: 500px;
   max-height: 90vh;
@@ -32,7 +32,7 @@
 @keyframes modalSlideIn {
   from {
     opacity: 0;
-    transform: scale(0.9) translateY(-20px);
+    transform: scale(0.9) translateY(-var(--spacing-5));
   }
   to {
     opacity: 1;
@@ -45,14 +45,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  border-bottom: 1px solid #E5E5EA;
+  border-bottom: 1px solid var(--color-stroke);
   flex-shrink: 0;
 }
 
 .title {
-  font-size: 20px;
+  font-size: var(--spacing-5);
   font-weight: 600;
-  color: #0A0A0A;
+  color: var(--color-text-high);
   font-family: system-ui, -apple-system, sans-serif;
   margin: 0 0 0 10px;
 }
@@ -60,15 +60,15 @@
 .close-button {
   background: none;
   border: none;
-  color: #8E8E93;
+  color: var(--color-text-low);
   cursor: pointer;
-  padding: 4px;
-  border-radius: 6px;
+  padding: var(--spacing-1);
+  border-radius: var(--radius-sm);
   transition: background-color 0.2s ease;
 }
 
 .close-button:hover {
-  background-color: #F6F7F9;
+  background-color: var(--color-surface-02);
 }
 
 .content {
@@ -80,9 +80,9 @@
 
 .footer {
   display: flex;
-  gap: 12px;
+  gap: var(--spacing-3);
   justify-content: flex-end;
   padding: 15px 10px 10px;
-  border-top: 1px solid #E5E5EA;
+  border-top: 1px solid var(--color-stroke);
   flex-shrink: 0;
 }

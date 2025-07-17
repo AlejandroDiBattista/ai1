@@ -1,7 +1,7 @@
 /* Estilos para el pie del formulario y las acciones */
 .form-footer {
-  padding: 20px 0 0 0;
-  border-top: 1px solid #E5E5EA;
+  padding: var(--spacing-5) 0 0 0;
+  border-top: 1px solid var(--color-stroke);
   flex-shrink: 0;
   background-color: white;
 }
@@ -29,8 +29,8 @@
 }
 
 .delete-button {
-  color: #FF3B30 !important;
-  border-color: #FF3B30 !important;
+  color: var(--color-error) !important;
+  border-color: var(--color-error) !important;
 }
 
 .delete-button:hover {
