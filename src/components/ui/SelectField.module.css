@@ -1,23 +1,23 @@
 .select-field {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: var(--spacing-1);
   flex: 1;
 }
 
 .label {
   font-size: 13px;
   font-weight: 400;
-  color: #545454;
+  color: var(--color-text-medium);
   font-family: system-ui, -apple-system, sans-serif;
   display: flex;
   align-items: center;
-  margin-bottom: 4px;
-  gap: 8px;
+  margin-bottom: var(--spacing-1);
+  gap: var(--spacing-2);
 }
 
 .required {
-  color: #FF3B30;
+  color: var(--color-error);
 }
 
 .select-container {
@@ -27,48 +27,48 @@
 .select {
   width: 100%;
   height: 44px;
-  padding: 0 16px;
+  padding: 0 var(--spacing-4);
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
   font-family: system-ui, -apple-system, sans-serif;
-  background-color: #F6F7F9;
-  border: 1px solid #E5E5EA;
-  border-radius: 6px;
+  background-color: var(--color-surface-02);
+  border: 1px solid var(--color-stroke);
+  border-radius: var(--radius-sm);
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   appearance: none;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
-  background-position: right 12px center;
+  background-position: right var(--spacing-3) center;
   background-repeat: no-repeat;
-  background-size: 16px;
+  background-size: var(--spacing-4);
   padding-right: 40px;
 }
 
 .select:focus {
-  border-color: #1476FF;
+  border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(20, 118, 255, 0.1);
 }
 
 .select:disabled {
   background-color: #F0F0F0;
-  color: #8E8E93;
+  color: var(--color-text-low);
   cursor: not-allowed;
 }
 
 .select--error {
-  border-color: #FF3B30;
+  border-color: var(--color-error);
 }
 
 .select--error:focus {
-  border-color: #FF3B30;
+  border-color: var(--color-error);
   box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.1);
 }
 
 .error {
-  font-size: 12px;
-  color: #FF3B30;
-  margin-top: 4px;
+  font-size: var(--spacing-3);
+  color: var(--color-error);
+  margin-top: var(--spacing-1);
   font-family: system-ui, -apple-system, sans-serif;
 }

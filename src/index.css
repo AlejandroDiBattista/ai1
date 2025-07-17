@@ -1,3 +1,4 @@
+@import "./styles/variables.css";
 /* Reset y estilos globales */
 * {
   box-sizing: border-box;
@@ -6,12 +7,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-family-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F6F7F9;
-  color: #0A0A0A;
+  background-color: var(--color-surface-02);
+  color: var(--color-text-high);
 }
 
 #root {
@@ -19,15 +19,15 @@ body {
 }
 
 button {
-  font-family: inherit;
+  font-family: var(--font-family-base);
 }
 
 input, textarea {
-  font-family: inherit;
+  font-family: var(--font-family-base);
 }
 
 a {
-  color: #1476FF;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
