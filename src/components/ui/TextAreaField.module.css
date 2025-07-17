@@ -1,0 +1,81 @@
+/* Estilos para el componente TextAreaField */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #545454;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.textarea-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #F6F7F9;
+  border: 1px solid #E5E5EA;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  resize: vertical;
+}
+
+.textarea--with-icon {
+  padding-left: 44px;
+}
+
+.textarea--error {
+  border-color: #FF3B30;
+}
+
+.textarea:focus {
+  border-color: #1476FF;
+}
+
+.textarea::placeholder {
+  color: #8E8E93;
+}
+
+.textarea--readonly {
+  background-color: #F6F7F9;
+  cursor: default;
+  border-color: #E5E5EA;
+}
+
+.icon {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  color: #8E8E93;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.icon--readonly {
+  color: #8E8E93;
+}
+
+.error {
+  font-size: 12px;
+  color: #FF3B30;
+  font-family: system-ui, -apple-system, sans-serif;
+  margin-top: 2px;
+}

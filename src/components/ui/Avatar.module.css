@@ -1,0 +1,72 @@
+/* Avatar base styles */
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, sans-serif;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Tamaños */
+.avatar--small {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+}
+
+.avatar--medium {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.avatar--large {
+  width: 56px;
+  height: 56px;
+  font-size: 18px;
+}
+
+/* Variantes por tipo */
+.avatar--contact {
+  background-color: #007AFF; /* Azul para contactos */
+}
+
+.avatar--product {
+  background-color: #34C759; /* Verde para productos */
+}
+
+.avatar--purchase {
+  background-color: #FF9500; /* Naranja para compras */
+}
+
+/* Estados hover y focus para interactividad */
+.avatar:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .avatar--large {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+  }
+  
+  .avatar--medium {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+  
+  .avatar--small {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+}

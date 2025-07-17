@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Sidebar } from './components/Sidebar';
-import { ContactManagement } from './components/ContactManagement';
-import { ProductManagement } from './components/ProductManagement';
-import { PurchaseManagement } from './components/PurchaseManagement';
-import { useContacts } from './hooks/useContacts';
-import { useProducts } from './hooks/useProducts';
-import { usePurchases } from './hooks/usePurchases';
+import { ContactManagement } from './components/Contact';
+import { ProductManagement } from './components/Product';
+import { PurchaseManagement } from './components/Purchase';
+import { useContacts } from './hooks/Contact';
+import { useProducts } from './hooks/Product';
+import { usePurchases } from './hooks/Purchase';
 import styles from './App.module.css';
 
 type AppSection = 'contacts' | 'products' | 'purchases';

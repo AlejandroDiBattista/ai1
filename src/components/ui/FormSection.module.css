@@ -1,0 +1,32 @@
+.section {
+  border: 1px solid #E5E5EA;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: #FAFAFA;
+}
+
+.section-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #0A0A0A;
+  margin: 0 0 16px;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section--customer {
+  background-color: #F0F9FF;
+  border-color: #0EA5E9;
+}
+
+.section--items {
+  background-color: #F0FDF4;
+  border-color: #22C55E;
+}
+
+.section--summary {
+  background-color: #FEF3C7;
+  border-color: #F59E0B;
+}

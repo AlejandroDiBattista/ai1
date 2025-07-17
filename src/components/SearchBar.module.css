@@ -15,7 +15,7 @@
   font-family: system-ui, -apple-system, sans-serif;
   background-color: #F6F7F9;
   border: 1px solid #E5E5EA;
-  border-radius: 12px;
+  border-radius: 10px;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }

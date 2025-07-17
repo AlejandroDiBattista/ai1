@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.form-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

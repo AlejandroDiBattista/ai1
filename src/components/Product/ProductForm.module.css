@@ -1,0 +1,31 @@
+/* Estilos específicos para ProductForm - La estructura de form usa FormContainer */
+
+.currency-input,
+.number-input {
+  text-align: right;
+}
+
+.profit-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #F0F9FF;
+  border: 1px solid #0EA5E9;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #0369A1;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.profit-positive {
+  background-color: #F0FDF4;
+  border-color: #22C55E;
+  color: #15803D;
+}
+
+.profit-negative {
+  background-color: #FEF2F2;
+  border-color: #EF4444;
+  color: #DC2626;
+}
