@@ -1,15 +1,15 @@
 /* Estilos para la aplicación principal */
 .app {
   min-height: 100vh;
-  background-color: #F6F7F9;
-  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--color-surface-02);
+  font-family: var(--font-family);
   display: flex;
 }
 
 .main-content {
   flex: 1;
   margin-left: 280px;
-  transition: margin-left 0.3s ease;
+  transition: margin-left var(--transition-medium);
 }
 
 .main-content--collapsed {
@@ -19,38 +19,38 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px;
+  padding: var(--spacing-6);
 }
 
 .content {
-  background-color: #FFFFFF;
+  background-color: var(--color-surface-01);
   border-radius: 20px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.06);
-  padding: 24px;
+  box-shadow: 0px 2px var(--radius-sm) var(--color-shadow-medium);
+  padding: var(--spacing-6);
 }
 
 .fab {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: var(--spacing-6);
+  right: var(--spacing-6);
   width: 56px;
   height: 56px;
-  background-color: #1476FF;
-  color: #FFFFFF;
+  background-color: var(--color-primary);
+  color: var(--color-surface-01);
   border: none;
   border-radius: 50%;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px var(--spacing-1) var(--spacing-3) var(--color-shadow-strong);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   z-index: 100;
 }
 
 .fab:hover {
   transform: scale(1.1);
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px var(--radius-sm) var(--spacing-4) var(--color-shadow-darkest);
 }
 
 .fab:active {
@@ -63,16 +63,16 @@
   }
   
   .container {
-    padding: 16px;
+    padding: var(--spacing-4);
     padding-top: 80px; /* Espacio para el botón de menú */
   }
   
   .content {
-    padding: 20px;
+    padding: var(--spacing-5);
   }
   
   .fab {
-    bottom: 16px;
-    right: 16px;
+    bottom: var(--spacing-4);
+    right: var(--spacing-4);
   }
 }

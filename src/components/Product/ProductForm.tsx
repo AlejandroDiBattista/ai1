@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Hash, FileText, Tag, DollarSign, TrendingUp, Package } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 import { InputField, FormRow, FormContainer } from '../ui';
 import type { Product, ProductFormData, ProductModalMode } from '../../types/product';
 import styles from './ProductForm.module.css';
@@ -151,7 +151,6 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             value={formData.codigo}
             onChange={(e) => handleChange('codigo', e.target.value.toUpperCase())}
             error={errors.codigo}
-            icon={<Hash size={18} />}
             readOnly={isReadOnly}
             required
           />
@@ -162,7 +161,6 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             value={formData.stock}
             onChange={(e) => handleChange('stock', e.target.value)}
             error={errors.stock}
-            icon={<Package size={18} />}
             readOnly={isReadOnly}
             required
             className={styles['number-input']}
@@ -175,7 +173,6 @@ export const ProductForm: React.FC<ProductFormProps> = ({
           value={formData.descripcion}
           onChange={(e) => handleChange('descripcion', e.target.value)}
           error={errors.descripcion}
-          icon={<FileText size={18} />}
           readOnly={isReadOnly}
           required
         />
@@ -186,7 +183,6 @@ export const ProductForm: React.FC<ProductFormProps> = ({
           value={formData.marca}
           onChange={(e) => handleChange('marca', e.target.value)}
           error={errors.marca}
-          icon={<Tag size={18} />}
           readOnly={isReadOnly}
           required
         />
@@ -200,7 +196,6 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             value={formData.costo}
             onChange={(e) => handleChange('costo', e.target.value)}
             error={errors.costo}
-            icon={<DollarSign size={18} />}
             readOnly={isReadOnly}
             required
             className={styles['currency-input']}
@@ -213,7 +208,6 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             value={formData.precio}
             onChange={(e) => handleChange('precio', e.target.value)}
             error={errors.precio}
-            icon={<DollarSign size={18} />}
             readOnly={isReadOnly}
             required
             className={styles['currency-input']}

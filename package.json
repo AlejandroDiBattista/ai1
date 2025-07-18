@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "tokens:validate": "node scripts/validate-tokens.cjs",
+    "tokens:migrate": "node scripts/migrate-tokens.cjs",
+    "tokens:fix": "node scripts/fix-migration-errors.cjs",
+    "tokens:help": "echo 'CSS Tokens Scripts:\n  npm run tokens:validate - Validar uso de tokens\n  npm run tokens:migrate - Migrar valores hardcodeados\n  npm run tokens:fix - Corregir errores de migración\n  Ver CSS_TOKENS_GUIDE.md para más información'"
   },
   "dependencies": {
     "lucide-react": "^0.520.0",

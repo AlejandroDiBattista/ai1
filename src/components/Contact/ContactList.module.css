@@ -3,15 +3,15 @@
 .avatar {
   width: 48px;
   height: 48px;
-  background-color: #1476FF;
+  background-color: var(--color-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: var(--color-surface-01);
   font-weight: 600;
   font-size: 18px;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-family);
   flex-shrink: 0;
 }
 
@@ -19,15 +19,15 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: var(--spacing-1);
   min-width: 0;
 }
 
 .name {
-  font-size: 17px;
+  font-size: var(--font-size-h3);
   font-weight: 600;
-  color: #0A0A0A;
-  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--color-text-high);
+  font-family: var(--font-family);
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -41,12 +41,12 @@
 }
 
 .contact-detail {
-  font-size: 13px;
-  color: #545454;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-size: var(--font-size-caption);
+  color: var(--color-text-medium);
+  font-family: var(--font-family);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--radius-sm);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -54,38 +54,38 @@
 
 .empty-state {
   text-align: center;
-  padding: 48px 24px;
-  color: #8E8E93;
+  padding: 48px var(--spacing-6);
+  color: var(--color-text-low);
 }
 
 .empty-state h3 {
-  font-size: 20px;
+  font-size: var(--spacing-5);
   font-weight: 600;
-  color: #545454;
-  margin: 0 0 8px 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--color-text-medium);
+  margin: 0 0 var(--spacing-2) 0;
+  font-family: var(--font-family);
 }
 
 .empty-state p {
-  font-size: 15px;
+  font-size: var(--font-size-body);
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-family);
 }
 
 .list-container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--spacing-3);
 }
 
 @media (max-width: 640px) {
   .avatar {
     width: 40px;
     height: 40px;
-    font-size: 16px;
+    font-size: var(--spacing-4);
   }
   
   .contact-detail {
-    font-size: 12px;
+    font-size: var(--spacing-3);
   }
 }

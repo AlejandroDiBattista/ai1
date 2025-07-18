@@ -8,24 +8,24 @@
 .profit-info {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px;
-  background-color: #F0F9FF;
-  border: 1px solid #0EA5E9;
-  border-radius: 6px;
-  font-size: 13px;
-  color: #0369A1;
-  font-family: system-ui, -apple-system, sans-serif;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3);
+  background-color: var(--color-blue-50);
+  border: 1px solid var(--color-blue-500);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-caption);
+  color: var(--color-blue-700);
+  font-family: var(--font-family);
 }
 
 .profit-positive {
-  background-color: #F0FDF4;
-  border-color: #22C55E;
-  color: #15803D;
+  background-color: var(--color-green-50);
+  border-color: var(--color-green-500);
+  color: var(--color-green-700);
 }
 
 .profit-negative {
-  background-color: #FEF2F2;
-  border-color: #EF4444;
-  color: #DC2626;
+  background-color: var(--color-red-50);
+  border-color: var(--color-red-500);
+  color: var(--color-red-600);
 }

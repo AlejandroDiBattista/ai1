@@ -1,7 +1,7 @@
 /* Estilos para el componente FormRow */
 .form-row {
   display: flex;
-  gap: 16px;
+  gap: var(--spacing-4);
 }
 
 .form-row > * {
@@ -11,6 +11,6 @@
 @media (max-width: 640px) {
   .form-row {
     flex-direction: column;
-    gap: 20px;
+    gap: var(--spacing-5);
   }
 }

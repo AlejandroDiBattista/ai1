@@ -1,32 +1,32 @@
 .section {
-  border: 1px solid #E5E5EA;
-  border-radius: 12px;
+  border: 1px solid var(--color-stroke);
+  border-radius: var(--spacing-3);
   padding: 10px;
-  background-color: #FAFAFA;
+  background-color: var(--color-gray-50);
 }
 
 .section-title {
-  font-size: 17px;
+  font-size: var(--font-size-h3);
   font-weight: 600;
-  color: #0A0A0A;
-  margin: 0 0 16px;
-  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--color-text-high);
+  margin: 0 0 var(--spacing-4);
+  font-family: var(--font-family);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
 }
 
 .section--customer {
-  background-color: #F0F9FF;
-  border-color: #0EA5E9;
+  background-color: var(--color-blue-50);
+  border-color: var(--color-blue-500);
 }
 
 .section--items {
-  background-color: #F0FDF4;
-  border-color: #22C55E;
+  background-color: var(--color-green-50);
+  border-color: var(--color-green-500);
 }
 
 .section--summary {
-  background-color: #FEF3C7;
-  border-color: #F59E0B;
+  background-color: var(--color-yellow-100);
+  border-color: var(--color-yellow-500);
 }

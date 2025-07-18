@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { User, Mail, Phone, Building2, FileText } from 'lucide-react';
-import { InputField, TextAreaField, FormContainer, FormRow } from '../ui';
+import { InputField, TextAreaField, FormRow, FormContainer } from '../ui';
 import type { Contact, ContactFormData, ContactModalMode } from '../../types/contact';
 
 interface ContactFormProps {
@@ -124,7 +123,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           value={formData.firstName}
           onChange={(e) => handleChange('firstName', e.target.value)}
           error={errors.firstName}
-          icon={<User size={18} />}
           readOnly={isReadOnly}
           required
         />
@@ -134,7 +132,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           value={formData.lastName}
           onChange={(e) => handleChange('lastName', e.target.value)}
           error={errors.lastName}
-          icon={<User size={18} />}
           readOnly={isReadOnly}
           required
         />
@@ -147,7 +144,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         value={formData.email}
         onChange={(e) => handleChange('email', e.target.value)}
         error={errors.email}
-        icon={<Mail size={18} />}
         readOnly={isReadOnly}
         required
       />
@@ -159,7 +155,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         value={formData.phone}
         onChange={(e) => handleChange('phone', e.target.value)}
         error={errors.phone}
-        icon={<Phone size={18} />}
         readOnly={isReadOnly}
         required
       />
@@ -169,7 +164,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         placeholder="Nombre de la empresa"
         value={formData.company}
         onChange={(e) => handleChange('company', e.target.value)}
-        icon={<Building2 size={18} />}
         readOnly={isReadOnly}
       />
 
@@ -178,7 +172,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         placeholder="Notas adicionales..."
         value={formData.notes}
         onChange={(e) => handleChange('notes', e.target.value)}
-        icon={<FileText size={18} />}
         readOnly={isReadOnly}
         rows={3}
       />

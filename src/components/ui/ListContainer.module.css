@@ -14,23 +14,23 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 60px 20px;
-  color: #8E8E93;
+  padding: 60px var(--spacing-5);
+  color: var(--color-text-low);
   min-height: 200px;
 }
 
 .empty-state h3 {
-  font-size: 20px;
+  font-size: var(--spacing-5);
   font-weight: 600;
-  margin: 0 0 8px;
-  color: #1C1C1E;
+  margin: 0 0 var(--spacing-2);
+  color: var(--color-gray-900);
 }
 
 .empty-state p {
-  font-size: 16px;
+  font-size: var(--spacing-4);
   font-weight: 400;
   margin: 0;
-  color: #8E8E93;
+  color: var(--color-text-low);
 }
 
 /* Responsive */
@@ -40,7 +40,7 @@
   }
   
   .empty-state {
-    padding: 40px 20px;
+    padding: 40px var(--spacing-5);
     min-height: 160px;
   }
   

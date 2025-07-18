@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { User, ShoppingCart, Calculator, Plus, Trash2, FileText } from 'lucide-react';
-import { InputField, SelectField, TextAreaField, FormRow, FormSection, FormContainer } from '../ui';
+import { User, ShoppingCart, Calculator, Plus, Trash2 } from 'lucide-react';
+import { InputField, SelectField, TextAreaField, FormSection, FormContainer } from '../ui';
 import type { Purchase, PurchaseFormData, PurchaseModalMode } from '../../types/purchase';
 import type { Contact } from '../../types/contact';
 import type { Product } from '../../types/product';
@@ -181,7 +181,6 @@ export const PurchaseForm: React.FC<PurchaseFormProps> = ({
           <InputField
             label="Cliente"
             value={selectedCustomer ? `${selectedCustomer.firstName} ${selectedCustomer.lastName}` : 'Cliente no encontrado'}
-            icon={<User size={18} />}
             readOnly={true}
           />
         ) : (
@@ -195,7 +194,6 @@ export const PurchaseForm: React.FC<PurchaseFormProps> = ({
             }))}
             placeholder="Seleccionar cliente..."
             error={errors.customerContactId}
-            icon={<User size={18} />}
             readOnly={isReadOnly}
             required
           />
@@ -214,20 +212,17 @@ export const PurchaseForm: React.FC<PurchaseFormProps> = ({
             <InputField
               label="Email"
               value={selectedCustomer.email}
-              icon={<User size={18} />}
               readOnly={true}
             />
             <InputField
               label="Teléfono"
               value={selectedCustomer.phone}
-              icon={<User size={18} />}
               readOnly={true}
             />
             {selectedCustomer.company && (
               <InputField
                 label="Empresa"
                 value={selectedCustomer.company}
-                icon={<User size={18} />}
                 readOnly={true}
               />
             )}
@@ -237,57 +232,21 @@ export const PurchaseForm: React.FC<PurchaseFormProps> = ({
 
       {/* Sección Productos */}
       <FormSection title="Productos" icon={<ShoppingCart size={20} />} variant="items">
-        
-        {isReadOnly ? (
-          <div className={styles['items-readonly']}>
-            {formData.items.map((item, index) => {
-              const product = products.find(p => p.id === item.productId);
-              const itemSubtotal = getItemSubtotal(item.productId, item.quantity);
-              
-              return (
-                <div key={index} className={styles['readonly-item']}>
-                  <FormRow>
+        <div className={styles['items-container']}>
+          {formData.items.map((item, index) => {
+            const product = products.find(p => p.id === item.productId);
+            const itemSubtotal = getItemSubtotal(item.productId, item.quantity);
+            
+            return (
+              <div key={index} className={styles['item-row']}>
+                <div className={styles['item-select']}>
+                  {isReadOnly ? (
                     <InputField
                       label="Producto"
                       value={product ? `${product.codigo} - ${product.descripcion}` : 'Producto no encontrado'}
-                      icon={<ShoppingCart size={18} />}
                       readOnly={true}
                     />
-                    <InputField
-                      label="Cantidad"
-                      value={item.quantity}
-                      icon={<ShoppingCart size={18} />}
-                      readOnly={true}
-                    />
-                  </FormRow>
-                  <FormRow>
-                    <InputField
-                      label="Precio Unitario"
-                      value={product ? formatCurrency(product.precio) : '-'}
-                      icon={<ShoppingCart size={18} />}
-                      readOnly={true}
-                    />
-                    <InputField
-                      label="Subtotal"
-                      value={formatCurrency(itemSubtotal)}
-                      icon={<ShoppingCart size={18} />}
-                      readOnly={true}
-                    />
-                  </FormRow>
-                  {index < formData.items.length - 1 && <hr className={styles['item-separator']} />}
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <div className={styles['items-container']}>
-            {formData.items.map((item, index) => {
-              const product = products.find(p => p.id === item.productId);
-              const itemSubtotal = getItemSubtotal(item.productId, item.quantity);
-              
-              return (
-                <div key={index} className={styles['item-row']}>
-                  <div className={styles['item-select']}>
+                  ) : (
                     <SelectField
                       label="Producto"
                       value={item.productId}
@@ -299,114 +258,88 @@ export const PurchaseForm: React.FC<PurchaseFormProps> = ({
                           label: `${product.codigo} - ${product.descripcion} (Stock: ${product.stock})`
                         }))}
                       placeholder="Seleccionar producto..."
-                      icon={<ShoppingCart size={18} />}
-                      readOnly={isReadOnly}
                     />
-                  </div>
-
-                  <div className={styles['item-quantity']}>
-                    <InputField
-                      label="Cantidad"
-                      type="number"
-                      min="1"
-                      max={product?.stock || 999}
-                      value={item.quantity}
-                      onChange={(e) => handleItemChange(index, 'quantity', e.target.value)}
-                      placeholder="0"
-                      icon={<ShoppingCart size={18} />}
-                      readOnly={isReadOnly}
-                    />
-                  </div>
-
-                  <div className={styles['item-price']}>
-                    <label>Precio Unitario</label>
-                    <div className={styles['item-subtotal']}>
-                      {product ? formatCurrency(product.precio) : '-'}
-                    </div>
-                  </div>
-
-                  <div className={styles['item-subtotal']}>
-                    <label>Subtotal</label>
-                    <div className={styles['item-subtotal']}>
-                      {formatCurrency(itemSubtotal)}
-                    </div>
-                  </div>
-
-                  {!isReadOnly && formData.items.length > 1 && (
-                    <button
-                      type="button"
-                      className={styles['remove-item']}
-                      onClick={() => removeItem(index)}
-                      aria-label="Eliminar producto"
-                    >
-                      <Trash2 size={16} />
-                    </button>
                   )}
                 </div>
-              );
-            })}
 
-            {!isReadOnly && (
-              <button
-                type="button"
-                className={styles['add-item']}
-                onClick={addItem}
-              >
-                <Plus size={16} />
-                Agregar producto
-              </button>
-            )}
-          </div>
-        )}
+                <div className={styles['item-quantity']}>
+                  <InputField
+                    label="Cantidad"
+                    type="number"
+                    min="1"
+                    max={product?.stock || 999}
+                    value={item.quantity}
+                    onChange={(e) => handleItemChange(index, 'quantity', e.target.value)}
+                    placeholder="0"
+                    readOnly={isReadOnly}
+                  />
+                </div>
+
+                <div className={styles['item-price']}>
+                  <InputField
+                    label="Precio Unitario"
+                    value={product ? formatCurrency(product.precio) : '-'}
+                    readOnly={true}
+                  />
+                </div>
+
+                <div className={styles['item-subtotal-container']}>
+                  <InputField
+                    label="Subtotal"
+                    value={formatCurrency(itemSubtotal)}
+                    readOnly={true}
+                  />
+                </div>
+
+                {!isReadOnly && formData.items.length > 1 && (
+                  <button
+                    type="button"
+                    className={styles['remove-item']}
+                    onClick={() => removeItem(index)}
+                    aria-label="Eliminar producto"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                )}
+              </div>
+            );
+          })}
+
+          {!isReadOnly && (
+            <button
+              type="button"
+              className={styles['add-item']}
+              onClick={addItem}
+            >
+              <Plus size={16} />
+              Agregar producto
+            </button>
+          )}
+        </div>
         </FormSection>
 
       {/* Sección Resumen */}
       <FormSection title="Resumen" icon={<Calculator size={20} />} variant="summary">
-        
-        {isReadOnly ? (
-          <FormRow>
-            <InputField
-              label="Subtotal"
-              value={formatCurrency(subtotal)}
-              icon={<Calculator size={18} />}
-              readOnly={true}
-            />
-            <InputField
-              label="IVA (21%)"
-              value={formatCurrency(tax)}
-              icon={<Calculator size={18} />}
-              readOnly={true}
-            />
-            <InputField
-              label="Total"
-              value={formatCurrency(total)}
-              icon={<Calculator size={18} />}
-              readOnly={true}
-            />
-          </FormRow>
-        ) : (
-          <div className={styles['summary-grid']}>
-            <div className={styles['summary-label']}>Subtotal:</div>
-            <div className={styles['summary-value']}>{formatCurrency(subtotal)}</div>
-            
-            <div className={styles['summary-label']}>IVA (21%):</div>
-            <div className={styles['summary-value']}>{formatCurrency(tax)}</div>
-            
-            <div className={`${styles['summary-label']} ${styles['summary-total']}`}>Total:</div>
-            <div className={`${styles['summary-value']} ${styles['summary-total']}`}>
-              {formatCurrency(total)}
-            </div>
+        <div className={styles['summary-grid']}>
+          <div className={styles['summary-label']}>Subtotal:</div>
+          <div className={styles['summary-value']}>{formatCurrency(subtotal)}</div>
+          
+          <div className={styles['summary-label']}>IVA (21%):</div>
+          <div className={styles['summary-value']}>{formatCurrency(tax)}</div>
+          
+          <div className={`${styles['summary-label']} ${styles['summary-total']}`}>Total:</div>
+          <div className={`${styles['summary-value']} ${styles['summary-total']}`}>
+            {formatCurrency(total)}
           </div>
-        )}
+        </div>
         </FormSection>
 
       {/* Notas */}
-      <TextAreaField
+            <TextAreaField
         label="Notas"
-        placeholder="Notas adicionales sobre la compra..."
+        placeholder="Observaciones adicionales..."
         value={formData.notes}
         onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
-        icon={<FileText size={18} />}
         readOnly={isReadOnly}
         rows={3}
       />

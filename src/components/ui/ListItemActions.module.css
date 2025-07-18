@@ -14,27 +14,27 @@
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  transition: all 0.2s ease;
+  transition: all var(--transition-fast);
   flex-shrink: 0;
 }
 
 .edit-button {
-  background-color: #E3F2FD;
-  color: #1976D2;
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-800);
 }
 
 .edit-button:hover {
-  background-color: #BBDEFB;
+  background-color: var(--color-blue-200);
   transform: scale(1.05);
 }
 
 .delete-button {
-  background-color: #FFEBEE;
-  color: #D32F2F;
+  background-color: var(--color-red-100);
+  color: var(--color-red-700);
 }
 
 .delete-button:hover {
-  background-color: #FFCDD2;
+  background-color: var(--color-red-200);
   transform: scale(1.05);
 }
 
@@ -44,7 +44,7 @@
 
 @media (max-width: 768px) {
   .action-button {
-    width: 36px;
-    height: 36px;
+    width: 3var(--radius-sm);
+    height: 3var(--radius-sm);
   }
 }

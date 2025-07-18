@@ -1,14 +1,14 @@
 /* Estilos para el componente Button */
 .button {
-  border-radius: 12px;
+  border-radius: var(--spacing-3);
   cursor: pointer;
   outline: none;
-  font-family: system-ui, -apple-system, sans-serif;
-  transition: all 0.2s ease;
+  font-family: var(--font-family);
+  transition: all var(--transition-fast);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: var(--spacing-2);
   border: none;
 }
 
@@ -18,44 +18,44 @@
 
 /* Variantes */
 .button--primary {
-  background-color: #1476FF;
-  color: #FFFFFF;
+  background-color: var(--color-primary);
+  color: var(--color-surface-01);
 }
 
 .button--primary:hover:not(:disabled) {
-  background-color: #0F64DB;
+  background-color: var(--color-primary-hover);
 }
 
 .button--primary:disabled {
-  background-color: #8E8E93;
+  background-color: var(--color-text-low);
 }
 
 .button--secondary {
-  background-color: #F6F7F9;
-  color: #0A0A0A;
-  border: 1px solid #E5E5EA;
+  background-color: var(--color-surface-02);
+  color: var(--color-text-high);
+  border: 1px solid var(--color-stroke);
 }
 
 .button--ghost {
   background-color: transparent;
-  color: #1476FF;
+  color: var(--color-primary);
 }
 
 /* Tamaños */
 .button--sm {
-  padding: 8px 12px;
-  font-size: 13px;
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-caption);
   font-weight: 400;
 }
 
 .button--md {
-  padding: 12px 20px;
-  font-size: 17px;
+  padding: var(--spacing-3) var(--spacing-5);
+  font-size: var(--font-size-h3);
   font-weight: 600;
 }
 
 .button--lg {
-  padding: 16px 24px;
-  font-size: 20px;
+  padding: var(--spacing-4) var(--spacing-6);
+  font-size: var(--spacing-5);
   font-weight: 600;
 }

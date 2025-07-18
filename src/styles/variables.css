@@ -1,0 +1,137 @@
+/* 
+ * Tokens CSS centralizados
+ * Basado en src/styles/tokens.ts para consistencia
+ * Generado automáticamente - no editar manualmente
+ */
+
+:root {
+  /* Colores */
+  --color-primary: #1476FF;
+  --color-primary-hover: #0F64DB;
+  --color-error: #FF3B30;
+  --color-warning: #FF9500;
+  --color-success: #34C759;
+  --color-info: #5AC8FA;
+  
+  --color-text-high: #0A0A0A;
+  --color-text-medium: #545454;
+  --color-text-low: #8E8E93;
+  
+  --color-surface-01: #FFFFFF;
+  --color-surface-02: #F6F7F9;
+  --color-stroke: #E5E5EA;
+  --color-overlay: rgba(0,0,0,0.25);
+  
+  /* Colores adicionales del sistema */
+  --color-blue-50: #F0F9FF;
+  --color-blue-500: #0EA5E9;
+  --color-blue-700: #0369A1;
+  --color-blue-800: #1976D2;
+  --color-blue-900: #007AFF;
+  --color-blue-100: #E3F2FD;
+  --color-blue-200: #BBDEFB;
+  
+  --color-green-50: #F0FDF4;
+  --color-green-500: #22C55E;
+  --color-green-700: #15803D;
+  --color-green-600: #16A34A;
+  
+  --color-red-50: #FEF2F2;
+  --color-red-500: #EF4444;
+  --color-red-600: #DC2626;
+  --color-red-700: #D32F2F;
+  --color-red-100: #FFEBEE;
+  --color-red-200: #FFCDD2;
+  --color-red-100-alt: #FFE5E5;
+  
+  --color-yellow-100: #FEF3C7;
+  --color-yellow-500: #F59E0B;
+  
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F0F0F0;
+  --color-gray-900: #1C1C1E;
+  
+  /* Colores con transparencia */
+  --color-primary-10: rgba(20, 118, 255, 0.1);
+  --color-error-10: rgba(255, 59, 48, 0.1);
+  --color-shadow-light: rgba(0, 0, 0, 0.05);
+  --color-shadow-medium: rgba(0, 0, 0, 0.06);
+  --color-shadow-strong: rgba(0, 0, 0, 0.08);
+  --color-shadow-darker: rgba(0, 0, 0, 0.1);
+  --color-shadow-darkest: rgba(0, 0, 0, 0.12);
+  
+  /* Tipografía */
+  --font-family: system-ui, -apple-system, sans-serif;
+  
+  /* Tamaños de fuente */
+  --font-size-h1: 24px;
+  --font-size-h2: 20px;
+  --font-size-h3: 17px;
+  --font-size-body: 15px;
+  --font-size-caption: 13px;
+  
+  /* Pesos de fuente */
+  --font-weight-h1: 700;
+  --font-weight-h2: 600;
+  --font-weight-h3: 600;
+  --font-weight-body: 400;
+  --font-weight-caption: 400;
+  
+  /* Alturas de línea */
+  --line-height-h1: 32px;
+  --line-height-h2: 28px;
+  --line-height-h3: 24px;
+  --line-height-body: 22px;
+  --line-height-caption: 18px;
+  
+  /* Espaciado (grid de 4px) */
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-11: 44px; /* Altura específica de inputs */
+  --spacing-12: 48px;
+  
+  /* Espaciado especial */
+  --spacing-xs: 5px;  /* Casos especiales */
+  --spacing-sm: 14px; /* Entre 12px y 16px */
+  --spacing-lg: 18px; /* Para elementos medianos */
+  --spacing-xl: 56px; /* Para elementos grandes */
+  
+  /* Radios de borde */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-base: 8px;
+  --radius-pill: 999px;
+  
+  /* Sombras */
+  --shadow-card: 0px 2px 6px rgba(0,0,0,0.06);
+  --shadow-elevated: 0px 4px 12px rgba(0,0,0,0.08);
+  --shadow-light: 0 var(--spacing-1) var(--spacing-3) var(--color-shadow-darker);
+  
+  /* Tamaños específicos del negocio */
+  --size-input-height: 44px;
+  --size-avatar-sm: 36px;
+  --size-avatar-md: 48px;
+  --size-avatar-lg: 56px;
+  --size-mobile-breakpoint: 768px;
+  --size-desktop-max: 1024px;
+  
+  /* Transiciones comunes */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  
+  /* Z-indexes para capas */
+  --z-dropdown: 10;
+  --z-modal: 100;
+  --z-tooltip: 1000;
+}

@@ -6,7 +6,7 @@
   border-radius: 50%;
   color: white;
   font-weight: 600;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-family);
   flex-shrink: 0;
   -webkit-user-select: none;
   user-select: none;
@@ -16,7 +16,7 @@
 .avatar--small {
   width: 32px;
   height: 32px;
-  font-size: 12px;
+  font-size: var(--spacing-3);
 }
 
 .avatar--medium {
@@ -33,21 +33,21 @@
 
 /* Variantes por tipo */
 .avatar--contact {
-  background-color: #007AFF; /* Azul para contactos */
+  background-color: var(--color-blue-900); /* Azul para contactos */
 }
 
 .avatar--product {
-  background-color: #34C759; /* Verde para productos */
+  background-color: var(--color-success); /* Verde para productos */
 }
 
 .avatar--purchase {
-  background-color: #FF9500; /* Naranja para compras */
+  background-color: var(--color-warning); /* Naranja para compras */
 }
 
 /* Estados hover y focus para interactividad */
 .avatar:hover {
   transform: scale(1.05);
-  transition: transform 0.2s ease;
+  transition: transform var(--transition-fast);
 }
 
 /* Responsive */
@@ -55,18 +55,18 @@
   .avatar--large {
     width: 48px;
     height: 48px;
-    font-size: 16px;
+    font-size: var(--spacing-4);
   }
   
   .avatar--medium {
-    width: 36px;
-    height: 36px;
-    font-size: 13px;
+    width: 3var(--radius-sm);
+    height: 3var(--radius-sm);
+    font-size: var(--font-size-caption);
   }
   
   .avatar--small {
-    width: 28px;
-    height: 28px;
+    width: 2var(--spacing-2);
+    height: 2var(--spacing-2);
     font-size: 11px;
   }
 }

@@ -14,7 +14,6 @@ interface SelectFieldProps {
   options: SelectOption[];
   placeholder?: string;
   error?: string;
-  icon?: React.ReactNode;
   readOnly?: boolean;
   disabled?: boolean;
   required?: boolean;
@@ -29,7 +28,6 @@ export const SelectField: React.FC<SelectFieldProps> = ({
   options,
   placeholder = "Seleccionar opción...",
   error,
-  icon,
   readOnly = false,
   disabled = false,
   required = false,
@@ -41,7 +39,6 @@ export const SelectField: React.FC<SelectFieldProps> = ({
   return (
     <div className={`${styles['select-field']} ${className}`}>
       <label htmlFor={selectId} className={styles.label}>
-        {icon}
         {label}
         {required && <span className={styles.required}>*</span>}
       </label>
