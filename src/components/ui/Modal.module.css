@@ -72,10 +72,12 @@
 }
 
 .content {
-  padding: 10px;
-  overflow-y: auto;
+  padding: var(--spacing-3);
   flex: 1;
   min-height: 0;
+  /* overflow: hidden; El scroll lo manejará el FormContainer */
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {

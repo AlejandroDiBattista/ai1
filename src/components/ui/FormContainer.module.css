@@ -4,13 +4,35 @@
   height: 100%;
   background: white;
   border-radius: 20px;
+  max-height: 100vh; /* Asegurar que no exceda la altura de la ventana */
+  /* overflow: hidden; Evitar scroll en el contenedor principal */
 }
 
 .form-body {
   flex: 1;
   overflow-y: auto;
-  padding: 10px 0 0 0;
+  padding: var(--spacing-3) 0 0 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--spacing-3);
+  min-height: 0; /* Importante: permite que el flex item se contraiga */
+}
+
+/* Asegurar que el formulario se comporte correctamente dentro del modal */
+.form-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.form-body::-webkit-scrollbar-track {
+  background: var(--color-surface-02);
+  border-radius: var(--radius-sm);
+}
+
+.form-body::-webkit-scrollbar-thumb {
+  background: var(--color-stroke);
+  border-radius: var(--radius-sm);
+}
+
+.form-body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-low);
 }
